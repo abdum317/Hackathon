@@ -25,7 +25,6 @@
                         class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                         Login to your account
                     </h1>
-                    <form class="space-y-4 md:space-y-6" action="#">
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                                 email</label>
@@ -41,11 +40,12 @@
                                 required="">
                         </div>
                         <div class="flex items-center justify-between">
-                            <p id="forgot" class="text-sm font-medium text-primary-600 hover:underline dark:text-[#2563eb]">Forgot
+                            <p id="forgot" class="text-sm font-medium text-primary-600 hover:underline dark:text-[#2563eb] cursor-pointer">Forgot
                                 password?</p>
                         </div>
                         <button type="submit" id="click"
-                            class="w-full text-white bg-[#2563eb] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-[#0c54ef] dark:focus:ring-[#0c54ef]">Login</button>
+                            class="w-full text-white bg-[#2563eb] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-[#0c54ef] dark:focus:ring-[#0c54ef] ">Login</button>
+                            <img id="loading" class="w-16 mt-0 ml-auto mr-auto hidden" src="images/Spinner-1s-200px.gif" alt="loadingGif">
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                             Don’t have an account yet? <a href="signup.html"
                                 class="font-medium text-[#2563eb] hover:underline dark:text-primary-500">Sign up</a>

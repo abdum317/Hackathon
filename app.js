@@ -1,10 +1,13 @@
 import { auth } from "./config.js";
-import { signInWithEmailAndPassword, sendPasswordResetEmail , onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 let click = document.getElementById("click");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let forgot = document.getElementById("forgot");
+let loading = document.getElementById("loading");
 click.addEventListener("click", () => {
+  loading.style.display = "block";
+  click.style.display = "none";
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then((userCredential) => {
       // Signed in 
@@ -17,6 +20,8 @@ click.addEventListener("click", () => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorMessage);
+      loading.style.display = "none";
+      click.style.display = "block";
       swal("please Register First");
     });
 })
@@ -35,9 +40,9 @@ forgot.addEventListener("click", () => {
     });
 })
 onAuthStateChanged(auth, (user) => {
-if (user) {
-const uid = user.uid;
-// ...
-} else {
-}
+  if (user) {
+    const uid = user.uid;
+    // ...
+  } else {
+  }
 });
