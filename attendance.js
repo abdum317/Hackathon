@@ -44,8 +44,8 @@ signout.addEventListener("click", () => {
 
 
 button.addEventListener("click", () => {
-    let names = localStorage.getItem("TeacherName");
-    console.log(names);
+    // let names = localStorage.getItem("TeacherName");
+    // console.log(names);
     // console.log(search.value);
     // search.value = "";
     let studentDetail = collection(db, "studentDetail");
@@ -54,10 +54,12 @@ button.addEventListener("click", () => {
     getDocs(q)
         .then((items) => {
             items.docs.forEach(doc => {
+                console.log(doc.data());
                 profile.src = doc.data().picture;
-                name = doc.data().name;
-                rollNumber = doc.data().rollNumber;
-                section = doc.data().section;
+                name.innerHTML = doc.data().Name;
+                rollNumber.innerHTML = doc.data().rollNumber;
+                section.innerHTML = doc.data().section;
+                
             });
         })
 
@@ -66,6 +68,24 @@ button.addEventListener("click", () => {
 })
 
 
-mark.addEventListener("click" , ()=>{
+mark.addEventListener("click" , async ()=>{
+    let studentDetail = collection(db, "studentDetail");
+    const q = query(studentDetail, where("rollNumber", "==", search.value));
+    // console.log(auth.currentUser.uid);
+    getDocs(q)
+        .then((items) => {
+            items.docs.forEach(async doc => {
+                console.log(doc.data());
+                let attendance = collection(db, "attendance");
+                await addDoc(attendance, { Name: doc.data().Name , rollNumber: doc.data().rollNumber , section: doc.data().section , attendance: select.value});
+            
+                swal("Good job!", "student attendace complete !", "success");
+                
+            });
+        })
     console.log(select.value);
+
+        
+        
+
 })
