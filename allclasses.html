@@ -6,14 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Classes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body class="bg-[#111827]">
-    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
-<ul id="list" class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
-    <li >
-        At least 10 characters (and up to 100 characters)
-    </li>
+    
 
-</ul>
+    <div class="overflow-x-auto relative">
+        <table class="w-[80%] mx-auto mt-52 text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="py-3 px-6">
+                        Teacher name
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Course Name
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Schedule
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Section
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Timing
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Delete
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="list">
+              <!-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Apple MacBook Pro 17"
+                    </th>
+                    <td class="py-4 px-6">
+                        Sliver
+                    </td>
+                    <td class="py-4 px-6">
+                        Laptop
+                    </td>
+                    <td class="py-4 px-6">
+                        $2999
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Microsoft Surface Pro
+                    </th>
+                    <td class="py-4 px-6">
+                        White
+                    </td>
+                    <td class="py-4 px-6">
+                        Laptop PC
+                    </td>
+                    <td class="py-4 px-6">
+                        $1999
+                    </td>
+                </tr>
+                <tr class="bg-white dark:bg-gray-800">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Magic Mouse 2
+                    </th>
+                    <td class="py-4 px-6">
+                        Black
+                    </td>
+                    <td class="py-4 px-6">
+                        Accessories
+                    </td>
+                    <td class="py-4 px-6">
+                        $99
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div class="flex justify-center">
+            <button id="signout" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-12 ">Signout</button>
+        </div>
+    </div>
+    
+
+<script type="module" src="allclasses.js"></script>
 </body>
 </html>

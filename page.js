@@ -3,7 +3,6 @@ import { signOut , onAuthStateChanged } from "https://www.gstatic.com/firebasejs
 
 let classMaking = document.getElementById("class-making");
 let attendance = document.getElementById("attendace-portal");
-let student = document.getElementById("student-making");
 
 let signout = document.getElementById("signout");
 signout.addEventListener("click", () => {
@@ -23,10 +22,11 @@ classMaking.addEventListener("click" , ()=>{
 attendance.addEventListener("click" , ()=>{
     window.location = "./attendance.html"
 });
+let student = document.getElementById("student");
 student.addEventListener("click" , ()=>{
     window.location = "./student.html"
 })
-
+console.log(auth);
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
