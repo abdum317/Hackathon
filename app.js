@@ -3,7 +3,6 @@ import { signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged 
 let click = document.getElementById("click");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
-let forgot = document.getElementById("forgot");
 let loading = document.getElementById("loading");
 click.addEventListener("click", () => {
   loading.style.display = "block";
@@ -25,20 +24,7 @@ click.addEventListener("click", () => {
       swal("please Register First");
     });
 })
-forgot.addEventListener("click", () => {
-  sendPasswordResetEmail(auth, email.value)
-    .then(() => {
-      // Password reset email sent!
-      // ..
-      swal("Dont Worry!!", "Verification Email send", "success");
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      swal("enter email first");
-      // ..
-    });
-})
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
     const uid = user.uid;

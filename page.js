@@ -1,7 +1,9 @@
 import { auth, db } from "./config.js";
 import { signOut , onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 
-
+let classMaking = document.getElementById("class-making");
+let attendance = document.getElementById("attendace-portal");
+let student = document.getElementById("student-making");
 
 let signout = document.getElementById("signout");
 signout.addEventListener("click", () => {
@@ -13,6 +15,16 @@ signout.addEventListener("click", () => {
         // An error happened.
 
     });
+});
+
+classMaking.addEventListener("click" , ()=>{
+    window.location = "./class.html"
+});
+attendance.addEventListener("click" , ()=>{
+    window.location = "./attendance.html"
+});
+student.addEventListener("click" , ()=>{
+    window.location = "./student.html"
 })
 
 
