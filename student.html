@@ -8,68 +8,89 @@
     <title>Class Portal</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 </head>
 
 <body class="bg-[#111827]">
     <div class="w-10/12 mx-auto">
 
 
-            <div class="grid gap-6 mb-6 mt-5">
-                <h1 class="text-white pb-10 text-5xl text-center  ">New Student</h1>
-                
-                <div>
-                    <label for="teacher-name" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Name</label>
-                    <input type="text" id="name"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Full Name" required="">
-                </div>
-                <div>
-                    <label class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Father Name</label>
-                    <input type="text" id="father"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Father Name" required="">
-                </div>
-                <div>
-                    <label for="visitors" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Roll Number</label>
-                    <input type="text" id="rollNumber"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="KH012118465" required="">
-                </div>
-                <div>
-                    <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Contact Number</label>
-                    <input type="text" id="contactNumber"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="0322-0000000" required="">
-                </div>
-                <div>
-                    <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">CNIC Number</label>
-                    <input type="text" id="cnic"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="42101-000000-0" required="">
-                </div>
-                <div>
-                    <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Picture</label>
-                    <input type="file" id="picture"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="" required="">
-                </div>
-                <div>
-                    <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Course Name</label>
-                    <input type="text" id="courseName"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Web and Mobile" required="">
-                </div>
+        <div class="grid gap-6 mb-6 mt-5">
+            <h1 class="text-white pb-10 text-5xl text-center  ">New Student</h1>
+
+            <div>
+                <label for="teacher-name"
+                    class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Name</label>
+                <input type="text" id="name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Full Name" required="">
             </div>
-           
-            <button type="submit" id="button"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Make New Student</button>
-                <div class="flex justify-center">
-                    <button  id="all-classes"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-52 sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5">Show All Student</button>
-                </div>
+            <div>
+                <label class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Father Name</label>
+                <input type="text" id="father"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Father Name" required="">
+            </div>
+            <div>
+                <label for="visitors" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Roll
+                    Number</label>
+                <input type="text" id="rollNumber"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="KH012118465" required="">
+            </div>
+            <div>
+                <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Contact
+                    Number</label>
+                <input type="text" id="contactNumber"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="0322-0000000" required="">
+            </div>
+            <div>
+                <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">CNIC
+                    Number</label>
+                <input type="text" id="cnic"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="42101-000000-0" required="">
+            </div>
+            <div>
+                <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Picture</label>
+                <input type="file" id="picture"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="" required="">
+            </div>
+            <div>
+                <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-gray-300">Course
+                    Name</label>
+                <input type="text" id="courseName"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Web and Mobile" required="">
+            </div>
+
+
+        </div>
+        <div>
+            <label class="block mb-2 text-sm font-medium text-white dark:text-gray-300" for="cars">Section</label>
+            <select class="bg-[#374151] text-white font-medium mb-5" id="section" name="section">
+            </select>
+        </div>
+
+
+
+
+        <button type="submit" id="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Make
+            New Student</button>
+        <div class="flex justify-center">
+            <button id="all-classes"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-52 sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-5 mb-5">Show
+                All Student</button>
+        </div>
+
         </form>
 
+
     </div>
+
 
     <script type="module" src="student.js"></script>
 </body>
