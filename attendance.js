@@ -44,6 +44,12 @@ signout.addEventListener("click", () => {
 
 
 button.addEventListener("click", () => {
+    const regex = /\S+/;
+    if (!search.value.match(regex)) {
+        swal("please enter correct roll Number");
+    }else{
+
+    
     // let names = localStorage.getItem("TeacherName");
     // console.log(names);
     // console.log(search.value);
@@ -62,8 +68,11 @@ button.addEventListener("click", () => {
                 
             });
         })
+        .catch(()=>{
+            alert("Please enter correct roll number")
+        })
 
-
+    }
 
 })
 
