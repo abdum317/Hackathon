@@ -47,6 +47,10 @@ button.addEventListener("click",async ()=>{
     // console.log(section.value);
     // console.log(courseName.value);
     // console.log(batch.value);
+    const regex = /\S+/;
+    if(!teacher.value.match(regex)){
+        swal("Please enter valid detail")
+    }else{
 
     let classDetail = collection(db, "classDetail");
     await addDoc(classDetail, { TeacherName: teacher.value, schedules: schedule.value, timing:timings.value, sections:section.value , courseName : courseName.value , batch: batch.value});
@@ -58,6 +62,7 @@ button.addEventListener("click",async ()=>{
     batch.value = "";
 
     swal("Good job!", "New Class Added!", "success");
+}
 })
 
 allClasses.addEventListener("click" , ()=>{

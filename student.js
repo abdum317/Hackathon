@@ -25,6 +25,30 @@ let profile = document.getElementById("picture");
 let courseName = document.getElementById("courseName");
 let section = document.getElementById("section");
 let button = document.getElementById("button");
+let signout = document.getElementById("signout");
+
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+    const uid = user.uid;
+    // ...
+    } else {
+        window.location = "./index.html";
+    }
+    });
+
+
+
+signout.addEventListener("click", () => {
+    signOut(auth).then(async () => {
+        // Sign-out successful.
+        await swal("Signout Succesfull", "", "success");
+        window.location = "./index.html";
+    }).catch((error) => {
+        // An error happened.
+
+    });
+});
 
 
 
@@ -39,6 +63,8 @@ async function getData(user) {
                     `
                 <option value="${doc.data().TeacherName +"  "+ doc.data().timing +"  "+ doc.data().schedules +"  "+ doc.data().courseName}">${doc.data().TeacherName} ${doc.data().timing} ${doc.data().schedules} ${doc.data().courseName}</option>
                 `
+                
+                
             });
         })
 
@@ -72,6 +98,13 @@ button.addEventListener("click", async () => {
 
 
 
+    let allClasses = collection(db, "classDetail");
+    const docSnaps = await getDocs(allClasses)
+        .then((items) => {
+            items.docs.forEach(doc => {
+                // console.log(doc.data());
+            });
+        })
 
 
 
@@ -93,3 +126,6 @@ button.addEventListener("click", async () => {
 
     swal("Good job!", "New Class Added!", "success");
 })
+
+
+

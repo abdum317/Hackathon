@@ -20,7 +20,7 @@ classMaking.addEventListener("click" , ()=>{
     window.location = "./class.html"
 });
 attendance.addEventListener("click" , ()=>{
-    window.location = "./attendance.html"
+    window.location = "./selectClass.html"
 });
 let student = document.getElementById("student");
 student.addEventListener("click" , ()=>{
